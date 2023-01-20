@@ -14,6 +14,7 @@ function App() {
   const [stepBG, setBG] = useState(true);
 
   const [giftData, setGgiftData] = useState([]);
+  const { status, connect, account, chainId, ethereum } = useMetaMask();
 
   //   const giftData = {
   //   title: "魂—須A佐",
@@ -27,15 +28,25 @@ function App() {
   // }, []);
 
 
+    useEffect(() => {
+      if(account){
+        console.log(account.toUpperCase());
+        setWallet_address(account.toUpperCase());
+      }
+  }, [account]);
+
 
   useEffect(() => {
+    console.log("wallet_address", wallet_address);
     // GET request using fetch inside useEffect React hook
     if (wallet_address !== null) {
       fetch(
-        "https://script.google.com/macros/s/AKfycbz-HixtcaBlzDu3-xRD-6ZDPB_HLmcOfqwqWonEsZO2__Fm2hlMW69E9rQiL_adPQMI/exec"
+        "https://script.google.com/macros/s/AKfycbze9lSurRmbLddGilT53KwFa7B07LfsAZtVSsW1ikqrxWA03L2TFZ5FO0VDKT5UC0fRNw/exec"
       )
         .then((response) => response.json())
         .then((data) => {
+          console.log(data);
+
           console.log(data[wallet_address]);
           setGgiftData(data[wallet_address]);
         });
@@ -44,7 +55,6 @@ function App() {
     // empty dependency array means this effect will only run once (like componentDidMount in classes)
   }, [wallet_address]);
 
-  const { status, connect, account, chainId, ethereum } = useMetaMask();
 
   if (status === "initializing")
     return <div>Synchronisation with MetaMask ongoing...</div>;
@@ -75,8 +85,7 @@ function App() {
   if (status === "connecting")
     return <div className="Connecting">Connecting...</div>;
 
-  if (status === "connected")
-    setWallet_address(account);
+  if (status === "connected") {
     // return <div>Connected account {account} on chain ID {chainId}</div>
     return (
       <div className="App">
@@ -135,21 +144,21 @@ function App() {
             // </div>
             <div class="cards-list">
               {giftData.map((item) => {
-                return ( <div class="card 1">
-                <div class="card_image">
-                  <img src={item.img_url} />
-                </div>
-                {/* <div class="card_title title-black"></div> */}
-                <div className="card_info">
-                  {/* <h3 className="card-creater">Zaza#3476</h3> */}
-                  <h3 className="card-title">{item.name}</h3>
-                  <h3 className="card-discription">{item.discription}</h3>
-                </div>
-                <div className="card_creater">
-                  <h3 className="creater">禮物來自</h3>
-                  <h3 className="creater-name">{item.dcid}</h3>
-                </div>
-              </div>);
+                return (<div class="card 1">
+                  <div class="card_image">
+                    <img src={item.img_url} />
+                  </div>
+                  {/* <div class="card_title title-black"></div> */}
+                  <div className="card_info">
+                    {/* <h3 className="card-creater">Zaza#3476</h3> */}
+                    <h3 className="card-title">{item.name}</h3>
+                    <h3 className="card-discription">{item.discription}</h3>
+                  </div>
+                  <div className="card_creater">
+                    <h3 className="creater">禮物來自</h3>
+                    <h3 className="creater-name">{item.dcid}</h3>
+                  </div>
+                </div>);
               })}
 
               {/* <div class="card 3">
@@ -170,6 +179,8 @@ function App() {
         </header>
       </div>
     );
+  }
+
 }
 
 export default App;
