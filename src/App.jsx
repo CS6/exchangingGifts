@@ -13,7 +13,7 @@ function App() {
   const [step, setStep] = useState(1);
   const [stepBG, setBG] = useState(true);
 
-  const [giftData, setGgiftData] = useState({});
+  const [giftData, setGgiftData] = useState([]);
 
   //   const giftData = {
   //   title: "魂—須A佐",
@@ -22,20 +22,22 @@ function App() {
   //   creater: "Zaza#3476",
   // };
 
-  useEffect(() => {
-    setWallet_address("0x0F7bd47c73a072341d6A4107Ffdc52A8F6f5C00F");
-  }, []);
+  // useEffect(() => {
+  //   setWallet_address("0xC7cba021d0284E7E2b5cAA202E8f2b76355D1EfD");
+  // }, []);
+
+
 
   useEffect(() => {
     // GET request using fetch inside useEffect React hook
     if (wallet_address !== null) {
       fetch(
-        "https://script.google.com/macros/s/AKfycbxdGzNufK1MAVgtZS-rnGuCSisFJy64WObHeOzmqDIgaiaBLNOpq2KOsrIxKp8fyw7-FQ/exec"
+        "https://script.google.com/macros/s/AKfycbz-HixtcaBlzDu3-xRD-6ZDPB_HLmcOfqwqWonEsZO2__Fm2hlMW69E9rQiL_adPQMI/exec"
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log(data[wallet_address][0]);
-          setGgiftData(data[wallet_address][0]);
+          console.log(data[wallet_address]);
+          setGgiftData(data[wallet_address]);
         });
     }
 
@@ -74,8 +76,8 @@ function App() {
     return <div className="Connecting">Connecting...</div>;
 
   if (status === "connected")
+    setWallet_address(account);
     // return <div>Connected account {account} on chain ID {chainId}</div>
-
     return (
       <div className="App">
         {/* <div>Connected account {account} on chain ID {chainId}</div> */}
@@ -132,26 +134,28 @@ function App() {
             //   {/* <img src="/1973_02.png" className="card_img" /> */}
             // </div>
             <div class="cards-list">
-              <div class="card 4">
+              {giftData.map((item) => {
+                return ( <div class="card 1">
                 <div class="card_image">
-                  <img src={giftData.img_url} />
+                  <img src={item.img_url} />
                 </div>
                 {/* <div class="card_title title-black"></div> */}
                 <div className="card_info">
                   {/* <h3 className="card-creater">Zaza#3476</h3> */}
-                  <h3 className="card-title">{giftData.name}</h3>
-                  <h3 className="card-discription">{giftData.discription}</h3>
+                  <h3 className="card-title">{item.name}</h3>
+                  <h3 className="card-discription">{item.discription}</h3>
                 </div>
-                <div className="card_creatercard_creatercard_creater">
+                <div className="card_creater">
                   <h3 className="creater">禮物來自</h3>
-                  <h3 className="creater-name">{giftData.dcid}</h3>
+                  <h3 className="creater-name">{item.dcid}</h3>
                 </div>
-              </div>
-              <div class="card 3">
+              </div>);
+              })}
+
+              {/* <div class="card 3">
                 <div className="card our_card">
                   <img src={giftData.img_url} className="card_img" />
                   <div className="card-info">
-                    {/* <h3 className="card-creater">Zaza#3476</h3> */}
                     <h3 className="card-title">{giftData.name}</h3>
                     <h3 className="card-discription">{giftData.discription}</h3>
                   </div>
@@ -159,10 +163,8 @@ function App() {
                     <h3 className="creater">禮物來自</h3>
                     <h3 className="creater-name">{giftData.dcid}</h3>
                   </div>
-                  {/* <img src="/1973_01.png" className="card_img" /> */}
-                  {/* <img src="/1973_02.png" className="card_img" /> */}
                 </div>
-              </div>
+              </div> */}
             </div>
           )}
         </header>

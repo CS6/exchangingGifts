@@ -127,19 +127,23 @@ video {
   background: linear-gradient(134.72deg, #7affcc 0%, #df2ffc 101.5%);
   margin: 30px auto;
   width: 300px;
-  height: 700px;
+  height: 600px;
   border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
   cursor: pointer;
   transition: 0.4s;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card .card_image {
   width: inherit;
   height: width;
   border-radius: 40px;
+  display: flex;
+
 }
 
 .card .card_image img {
@@ -147,6 +151,10 @@ video {
   height: inherit;
   border-radius: 40px;
   object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+
 }
 
 .card .card_title {
@@ -160,43 +168,34 @@ video {
 }
 
 .card .card_info {
+    display: flex;
+flex-direction: column;
   text-align: flex-start;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-  /* overflow: scroll; */
+  /* height: 250px; */
+  /* height: 200px; */
+  min-height: 250px;
+  max-height: 250px;
 }
 
-.card .card_creater {
-  position: absolute;
-  text-align: flex-start;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-  /* overflow: scroll; */
+.card .card_info .card-discription {
+  height: calc(100%-50px);
+  overflow: scroll;
 }
 
-.card .card_creater {
-  text-align: flex-start;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-  /* overflow: scroll; */
-}
 
 .card .card_creater {
+  display: flex;
+  flex-direction: row;
   text-align: flex-start;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
+  margin-top: 20px;
+  height: 30px;
+  /* bottom: 200px; */
   /* overflow: scroll; */
 }
 
