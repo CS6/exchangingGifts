@@ -117,19 +117,71 @@ function App() {
             </>
           )}
           {step == 3 && (
-            <div className="card">
-              <img src={giftData.img_url} className="card_img" />
-              <div className="card-info">
-                {/* <h3 className="card-creater">Zaza#3476</h3> */}
-                <h3 className="card-title">{giftData.name}</h3>
-                <h3 className="card-discription">{giftData.discription}</h3>
+            // <div className="card">
+            //   <img src={giftData.img_url} className="card_img" />
+            //   <div className="card-info">
+            //     {/* <h3 className="card-creater">Zaza#3476</h3> */}
+            //     <h3 className="card-title">{giftData.name}</h3>
+            //     <h3 className="card-discription">{giftData.discription}</h3>
+            //   </div>
+            //   <div className="card-creater">
+            //     <h3 className="creater">禮物來自</h3>
+            //     <h3 className="creater-name">{giftData.dcid}</h3>
+            //   </div>
+            //   {/* <img src="/1973_01.png" className="card_img" /> */}
+            //   {/* <img src="/1973_02.png" className="card_img" /> */}
+            // </div>
+             <div class="cards-list">
+
+              <div class="card 1">
+                <div className="card our_card">
+                  <img src={giftData.img_url} className="card_img" />
+                  <div className="card-info">
+                    {/* <h3 className="card-creater">Zaza#3476</h3> */}
+                    <h3 className="card-title">{giftData.name}</h3>
+                    <h3 className="card-discription">{giftData.discription}</h3>
+                  </div>
+                  <div className="card-creater">
+                    <h3 className="creater">禮物來自</h3>
+                    <h3 className="creater-name">{giftData.dcid}</h3>
+                  </div>
+                  {/* <img src="/1973_01.png" className="card_img" /> */}
+                  {/* <img src="/1973_02.png" className="card_img" /> */}
+                </div>
               </div>
-              <div className="card-creater">
-                <h3 className="creater">禮物來自</h3>
-                <h3 className="creater-name">{giftData.dcid}</h3>
+
+              <div class="card 2">
+                <div className="card our_card">
+                  <img src={giftData.img_url} className="card_img" />
+                  <div className="card-info">
+                    {/* <h3 className="card-creater">Zaza#3476</h3> */}
+                    <h3 className="card-title">{giftData.name}</h3>
+                    <h3 className="card-discription">{giftData.discription}</h3>
+                  </div>
+                  <div className="card-creater">
+                    <h3 className="creater">禮物來自</h3>
+                    <h3 className="creater-name">{giftData.dcid}</h3>
+                  </div>
+                  {/* <img src="/1973_01.png" className="card_img" /> */}
+                  {/* <img src="/1973_02.png" className="card_img" /> */}
+                </div>
               </div>
-              {/* <img src="/1973_01.png" className="card_img" /> */}
-              {/* <img src="/1973_02.png" className="card_img" /> */}
+              <div class="card 3">
+                <div className="card our_card">
+                  <img src={giftData.img_url} className="card_img" />
+                  <div className="card-info">
+                    {/* <h3 className="card-creater">Zaza#3476</h3> */}
+                    <h3 className="card-title">{giftData.name}</h3>
+                    <h3 className="card-discription">{giftData.discription}</h3>
+                  </div>
+                  <div className="card-creater">
+                    <h3 className="creater">禮物來自</h3>
+                    <h3 className="creater-name">{giftData.dcid}</h3>
+                  </div>
+                  {/* <img src="/1973_01.png" className="card_img" /> */}
+                  {/* <img src="/1973_02.png" className="card_img" /> */}
+                </div>
+              </div>
             </div>
           )}
         </header>
