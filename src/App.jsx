@@ -50,7 +50,7 @@ function App() {
     // GET request using fetch inside useEffect React hook
     if (wallet_address !== null) {
       fetch(
-        "https://script.google.com/macros/s/AKfycbwfmNzBi4Zw4372l6PKsMxxv9B_tuf4GmLyR3-pyVbtatw7vmpwQnM3HVFy0H2nCtFYtQ/exec"
+        "https://script.google.com/macros/s/AKfycbyirOXVpWcp05DHpQUHLeqDFGH7mZAINloFept8ntztQZjrFWDm8UO8YkDD_ODRmhmzlA/exec"
       )
         .then((response) => response.json())
         .then((data) => {
@@ -185,7 +185,7 @@ function App() {
                   autoPlay
                   playsInLine
                   className="video-mask"
-                  src="/open_v02_mask.mp4"
+                  src="/open_v02_mask.webm"
                 />
               </>
             )}
