@@ -113,11 +113,9 @@ function App() {
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
             <div className="NotUser">
-              <h1>你不是天選之人</h1>
+              <h1>🫵🫵🫵你沒交禮物還想交換😤😤😤</h1>
               <p>請使用正確的錢包</p>
               <p>重新連結請由 [Connected sied ]=> [disconnected]</p>
-
-             
             </div>
           </header>
         </div>
