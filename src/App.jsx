@@ -26,9 +26,10 @@ function App() {
   //   creater: "Zaza#3476",
   // };
 
-  // useEffect(() => {
-  //   setWallet_address("0xC7cba021d0284E7E2b5cAA202E8f2b76355D1EfD");
-  // }, []);
+  useEffect(() => {
+    setWallet_address("0X65D18C6EAB10CB5EC7A5505765F44BC294345FDD");
+    setNotUser(false)
+  }, []);
 
   // useEffect(() => {
   //   setNotUser(false); 
@@ -36,12 +37,12 @@ function App() {
 
 
 
-  useEffect(() => {
-    if (account) {
-      console.log(account.toUpperCase());
-      setWallet_address(account.toUpperCase());
-    }
-  }, [account]);
+  // useEffect(() => {
+  //   if (account) {
+  //     console.log(account.toUpperCase());
+  //     setWallet_address(account.toUpperCase());
+  //   }
+  // }, [account]);
 
 
   useEffect(() => {
@@ -219,7 +220,7 @@ function App() {
                       <h3 className="card-discription">{item.discription}</h3>
                     </div>
                     <div className="card_creater">
-                      <h3 className="creater">禮物來自</h3>
+                      <h3 className="creater">by</h3>
                       <h3 className="creater-name">{item.dcid}</h3>
                     </div>
                   </div>);

@@ -185,6 +185,10 @@ flex-direction: column;
 .card .card_info .card-discription {
   height: calc(100%-50px);
   overflow: scroll;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
 }
 
 
