@@ -42,6 +42,7 @@ function App() {
       console.log(account.toUpperCase());
       setWallet_address(account.toUpperCase());
     }
+    setNotUser(false); 
   }, [account]);
 
 
@@ -50,7 +51,7 @@ function App() {
     // GET request using fetch inside useEffect React hook
     if (wallet_address !== null) {
       fetch(
-        "https://script.google.com/macros/s/AKfycbyirOXVpWcp05DHpQUHLeqDFGH7mZAINloFept8ntztQZjrFWDm8UO8YkDD_ODRmhmzlA/exec"
+        "https://script.google.com/macros/s/AKfycbyzD07Urxrq5hAwA1rEgC_V4HhZMA6xE2NryXF2UFGAFrKw416BhZbnDN4B5JEUISg6/exec"
       )
         .then((response) => response.json())
         .then((data) => {
