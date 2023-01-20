@@ -11,3 +11,177 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 
+//css */
+.box_video {
+  position: absolute;
+    background-color: black;
+
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-loop {
+  position: absolute;
+    background-color: black;
+
+  z-index: 5;
+}
+
+.video-mask {
+  position: absolute;
+    background-color: black;
+
+  z-index: 2;
+}
+
+.video-box {
+  position: absolute;
+    background-color: #f8121200;
+
+  z-index: 3;
+}
+
+.myvideo {
+  width: 100%;
+  height: 100;
+}
+
+.video-Connect {
+  position: absolute;
+    background-color: black;
+
+  z-index: 1;
+}
+.Connect-btn {
+  position: absolute;
+  z-index: 5;
+}
+
+.Connecting {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.App-header {
+  background-color: black;
+}
+
+.box_video {
+  background-color: black;
+}
+
+.card {
+  background-color: black;
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  min-height: 800px;
+  background: linear-gradient(134.72deg, #7AFFCC 0%, #DF2FFC 101.5%);
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.card_img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50px;
+}
+
+.card-info {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+  padding-left: 10px;
+  height: 100%;
+}
+
+.card-title {
+  width: 490px;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.card-discription {
+  flex: 1;
+  width: 490px;
+  display: flex;
+  flex-direction: row;
+  text-align: initial;
+  margin: 5px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  height: 100%;
+}
+
+.card-creater {
+  width: 490px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: flex-end;
+  justify-content: flex-end; */
+
+  margin: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+}
+
+.creater {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 5px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.creater-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 5px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
