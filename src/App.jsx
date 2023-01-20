@@ -34,13 +34,13 @@ function App() {
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log(data[wallet_address]);
-          setGgiftData(data[wallet_address]);
+          console.log(data[wallet_address][0]);
+          setGgiftData(data[wallet_address][0]);
         });
     }
 
     // empty dependency array means this effect will only run once (like componentDidMount in classes)
-  }, [setWallet_address]);
+  }, [wallet_address]);
 
   const { status, connect, account, chainId, ethereum } = useMetaMask();
 
