@@ -142,7 +142,7 @@ function App() {
                   <h3 className="card-title">{giftData.name}</h3>
                   <h3 className="card-discription">{giftData.discription}</h3>
                 </div>
-                <div className="card-creater">
+                <div className="card_creatercard_creatercard_creater">
                   <h3 className="creater">禮物來自</h3>
                   <h3 className="creater-name">{giftData.dcid}</h3>
                 </div>

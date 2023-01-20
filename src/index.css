@@ -169,6 +169,37 @@ video {
   /* overflow: scroll; */
 }
 
+.card .card_creater {
+  position: absolute;
+  text-align: flex-start;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+  /* overflow: scroll; */
+}
+
+.card .card_creater {
+  text-align: flex-start;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+  /* overflow: scroll; */
+}
+
+.card .card_creater {
+  text-align: flex-start;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+  /* overflow: scroll; */
+}
+
 .card-info {
   display: flex;
   width: inherit;
