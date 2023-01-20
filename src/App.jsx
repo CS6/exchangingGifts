@@ -101,7 +101,21 @@ function App() {
     );
 
   if (status === "connecting")
-    return <div className="Connecting">Connecting...</div>;
+  
+    // return <div className="Connecting">Connecting...</div>;
+    return (
+      <div className="App">
+      <header className="App-header">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+
+        <div className="NotUser">
+          <h1>🚓  Connecting...  🚓</h1>
+          <p>！！！注意！！</p>
+          <p>多留意釣魚詐騙手法，勿點擊來路不明的信件及簡訊連結 ...</p>
+        </div>
+      </header>
+    </div>
+    )
 
   if (status === "connected") {
     // return <div>Connected account {account} on chain ID {chainId}</div>
@@ -114,7 +128,13 @@ function App() {
 
             <div className="NotUser">
               <h1>🫵🫵🫵你沒交禮物還想交換😤😤😤</h1>
+              <h2 className="EMJ">🫵 😤 🫳</h2>
+              <h2 className="EMJ"> 🦵🏻🦵🏻  </h2>
+
               <p>請使用正確的錢包</p>
+
+
+     
               <p>重新連結請由 [Connected sied ]=> [disconnected]</p>
             </div>
           </header>
