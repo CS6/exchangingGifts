@@ -51,7 +51,7 @@ function App() {
     // GET request using fetch inside useEffect React hook
     if (wallet_address !== null) {
       fetch(
-        "https://script.google.com/macros/s/AKfycbyzD07Urxrq5hAwA1rEgC_V4HhZMA6xE2NryXF2UFGAFrKw416BhZbnDN4B5JEUISg6/exec"
+        "https://script.google.com/macros/s/AKfycby-afUXaiaHkhWhCGPatth4q1trdrpItSCHmy6trARDSqtTYuz0-9SY3lF2umtPF6-Bbw/exec"
       )
         .then((response) => response.json())
         .then((data) => {
