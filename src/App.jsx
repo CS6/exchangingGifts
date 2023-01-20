@@ -26,10 +26,10 @@ function App() {
   //   creater: "Zaza#3476",
   // };
 
-  useEffect(() => {
-    setWallet_address("0X65D18C6EAB10CB5EC7A5505765F44BC294345FDD");
-    setNotUser(false)
-  }, []);
+  // useEffect(() => {
+  //   setWallet_address("0X65D18C6EAB10CB5EC7A5505765F44BC294345FDD");
+  //   setNotUser(false)
+  // }, []);
 
   // useEffect(() => {
   //   setNotUser(false); 
@@ -37,12 +37,12 @@ function App() {
 
 
 
-  // useEffect(() => {
-  //   if (account) {
-  //     console.log(account.toUpperCase());
-  //     setWallet_address(account.toUpperCase());
-  //   }
-  // }, [account]);
+  useEffect(() => {
+    if (account) {
+      console.log(account.toUpperCase());
+      setWallet_address(account.toUpperCase());
+    }
+  }, [account]);
 
 
   useEffect(() => {
@@ -102,20 +102,20 @@ function App() {
     );
 
   if (status === "connecting")
-  
+
     // return <div className="Connecting">Connecting...</div>;
     return (
       <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <header className="App-header">
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
-        <div className="NotUser">
-          <h1>🚓  Connecting...  🚓</h1>
-          <p>！！！注意！！</p>
-          <p>多留意釣魚詐騙手法，勿點擊來路不明的信件及簡訊連結 ...</p>
-        </div>
-      </header>
-    </div>
+          <div className="NotUser">
+            <h1>🚓  Connecting...  🚓</h1>
+            <p>！！！注意！！</p>
+            <p>多留意釣魚詐騙手法，勿點擊來路不明的信件及簡訊連結 ...</p>
+          </div>
+        </header>
+      </div>
     )
 
   if (status === "connected") {
@@ -135,7 +135,7 @@ function App() {
               <p>請使用正確的錢包</p>
 
 
-     
+
               <p>重新連結請由 [Connected sied ]=> [disconnected]</p>
             </div>
           </header>
@@ -181,13 +181,12 @@ function App() {
                   src="/open_v03.webm"
                   onEnded={() => setStep(3)}
                 />
-                {/* <video
-                autoPlay
-                playsInLine
-                className="video-mask"
-                muted
-                src="/open_v02_mask.mp4"
-              /> */}
+                <video
+                  autoPlay
+                  playsInLine
+                  className="video-mask"
+                  src="/open_v02_mask.mp4"
+                />
               </>
             )}
             {step == 3 && (
